@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="refresh" content="3;url=https://ntue-social-ai-apps.janeykases.chatgpt.site">
+  <title>NTUE 社會領域 AI 教學 APP 入口網</title>
+  <meta name="description" content="國立臺北教育大學社會領域教學研究中心 AI 教學 APP 入口網">
+  <link rel="canonical" href="https://ntue-social-ai-apps.janeykases.chatgpt.site">
+  <style>
+    :root { color-scheme: dark; --navy:#071329; --cyan:#4de7ee; --orange:#ffac45; --ink:#eafcff; }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; min-height:100vh; display:grid; place-items:center; overflow:hidden;
+      font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif; color:var(--ink);
+      background:
+        radial-gradient(circle at 18% 18%,rgba(77,231,238,.22),transparent 32%),
+        radial-gradient(circle at 82% 78%,rgba(255,172,69,.16),transparent 30%),
+        linear-gradient(135deg,#050b18,var(--navy) 55%,#062c3d);
+    }
+    body::before {
+      content:""; position:fixed; inset:0; opacity:.14; pointer-events:none;
+      background-image:linear-gradient(rgba(77,231,238,.45) 1px,transparent 1px),linear-gradient(90deg,rgba(77,231,238,.45) 1px,transparent 1px);
+      background-size:44px 44px; transform:perspective(500px) rotateX(62deg) scale(1.8) translateY(24%);
+    }
+    main {
+      position:relative; width:min(720px,calc(100% - 32px)); padding:44px 32px; text-align:center;
+      border:1px solid rgba(77,231,238,.45); border-radius:28px;
+      background:rgba(6,19,40,.78); box-shadow:0 24px 80px rgba(0,0,0,.45),inset 0 0 30px rgba(77,231,238,.06);
+      backdrop-filter:blur(16px);
+    }
+    .badge { display:inline-flex; align-items:center; gap:8px; padding:8px 14px; border-radius:99px; color:var(--cyan); background:rgba(77,231,238,.1); border:1px solid rgba(77,231,238,.3); font-size:14px; letter-spacing:.08em; }
+    .robot { font-size:64px; filter:drop-shadow(0 0 20px rgba(77,231,238,.38)); animation:float 2.4s ease-in-out infinite; }
+    h1 { margin:18px 0 10px; font-size:clamp(28px,6vw,48px); line-height:1.2; }
+    h1 span { color:var(--cyan); }
+    p { margin:0 auto 26px; max-width:550px; color:#b8d7e3; line-height:1.8; }
+    a {
+      display:inline-block; padding:14px 25px; border-radius:14px; font-weight:800; color:#08202a; text-decoration:none;
+      background:linear-gradient(135deg,var(--cyan),#92fbff); box-shadow:0 10px 28px rgba(77,231,238,.25);
+      transition:transform .18s,box-shadow .18s;
+    }
+    a:hover { transform:translateY(-2px); box-shadow:0 14px 36px rgba(77,231,238,.38); }
+    small { display:block; margin-top:18px; color:#7595a5; }
+    @keyframes float { 50% { transform:translateY(-8px) rotate(2deg); } }
+    @media (prefers-reduced-motion:reduce) { .robot { animation:none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="badge">NTUE · AI TEACHING HUB</div>
+    <div class="robot" aria-hidden="true">🤖📚</div>
+    <h1>社會領域 <span>AI 教學 APP</span> 入口網</h1>
+    <p>整合 21 款教學應用、QR Code 與主題分類，協助教師快速找到合適的 AI 教學工具。</p>
+    <a href="https://ntue-social-ai-apps.janeykases.chatgpt.site">立即進入教學 APP 入口網</a>
+    <small>頁面將在 3 秒後自動開啟完整網站</small>
+  </main>
+</body>
+</html>
