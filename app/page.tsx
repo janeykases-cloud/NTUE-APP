@@ -9,8 +9,13 @@ const categories = ["全部", "教學機器人", "領域互動", "自主探究",
 const appIcons: Record<string, string> = {
   "01":"📝", "02":"📊", "03":"🗺️", "04":"🧩", "05":"💬", "06":"🔎", "07":"❓",
   "A01":"🦸", "A02":"🏙️",
-  "B01":"🛍️", "B02":"🏺", "B03":"🦅", "B04":"🛡️", "B05":"🌍", "B06":"🍚", "B07":"💰", "B08":"🧞",
+  "B01":"🕵️", "B02":"🏺", "B03":"🦅", "B04":"🛡️", "B05":"🌍", "B06":"🍚", "B07":"💰", "B08":"🧞", "B09":"🤝",
   "C01":"🚨", "C02":"🏭", "C03":"🌱", "C04":"🛒"
+};
+
+const customQrCodes: Record<string, string> = {
+  "A01": "/qr/A01.png",
+  "A02": "/qr/A02.png",
 };
 
 const apps: AppItem[] = [
@@ -21,16 +26,17 @@ const apps: AppItem[] = [
   { id:"05", name:"ORID 焦點討論法機器人", category:"教學機器人", tag:"討論引導", url:"https://gemini.google.com/gem/1RMOcO0DOio09X4FzjXg7i0ZIXJlF9P0y?usp=sharing", description:"依 ORID 架構設計由觀察到決策的討論提問。" },
   { id:"06", name:"概念謎語生成機器人", category:"教學機器人", tag:"概念學習", url:"https://gemini.google.com/gem/1Fn0onPPBx3WbkaWicYEw5ekrRMkW_i5Z?usp=sharing", description:"將課程概念轉化為有趣的謎語與課堂挑戰。" },
   { id:"07", name:"社會領域提問設計機器人", category:"教學機器人", tag:"探究提問", url:"https://gemini.google.com/gem/1F7VR1kMpXaEnmpucaiVPDZehDpLcy9NZ?usp=sharing", description:"設計具層次的社會領域探究問題與追問。" },
-  { id:"A01", name:"性別平等小超人", category:"領域互動", tag:"性別平等", url:"https://ai.studio/apps/drive/1mnbRcOHw328Kb3273LoNjxHRpaoxfk4I", description:"透過生活情境辨識性別議題，練習判斷與行動。" },
-  { id:"A02", name:"城市規劃大師", category:"領域互動", tag:"公共參與", url:"https://aistudio.google.com/apps/drive/1n66X060RDJHVPifc3pBzKF84YFpRC5Ko?showPreview=true&showAssistant=true&fullscreenApplet=true", description:"在多元需求中思考城市發展、公共選擇與規劃。" },
-  { id:"B01", name:"小小聰明購物家", category:"自主探究", tag:"消費素養", url:"https://gemini.google.com/share/9fcdd691c96a", description:"從購物情境建立選擇、比較與負責消費能力。" },
-  { id:"B02", name:"文化探險記", category:"自主探究", tag:"文化學習", url:"https://gemini.google.com/share/b9a3769b15a0", description:"在探險任務中認識文化特色與多元觀點。" },
-  { id:"B03", name:"老鷹紅豆生態網", category:"自主探究", tag:"生態環境", url:"https://gemini.google.com/share/e9042058ffa7", description:"探索物種、生產與環境之間的生態關係。" },
+  { id:"A01", name:"性別平等小超人", category:"領域互動", tag:"性別平等", url:"https://janeykases-cloud.github.io/Genderequality/", description:"透過生活情境辨識性別議題，練習判斷與行動。" },
+  { id:"A02", name:"城市規劃大師", category:"領域互動", tag:"公共參與", url:"https://janeykases-cloud.github.io/UrbanPlan/site/index.html", description:"在多元需求中思考城市發展、公共選擇與規劃。" },
+  { id:"B01", name:"消費偵探社", category:"自主探究", tag:"消費素養", url:"https://janeykases-cloud.github.io/Consumer-Detective/", description:"化身消費偵探，在購物任務中練習比較、判斷與聰明選擇。" },
+  { id:"B02", name:"文化探險記", category:"自主探究", tag:"文化學習", url:"https://janeykases-cloud.github.io/Cultural-differences/", description:"破解文化誤解，在情境任務中理解差異並練習尊重多元觀點。" },
+  { id:"B03", name:"老鷹紅豆生態網", category:"自主探究", tag:"生態環境", url:"https://janeykases-cloud.github.io/eagle-red-bean-eco/", description:"進入田野調查局，探索食物網、友善農法與責任消費。" },
   { id:"B04", name:"人權守護者基地", category:"自主探究", tag:"人權教育", url:"https://gemini.google.com/share/9ca11b807954", description:"從案例與任務理解權利、責任及尊重。" },
-  { id:"B05", name:"全球環境偵探社", category:"自主探究", tag:"全球議題", url:"https://gemini.google.com/share/7c5cbf6893e0", description:"蒐集線索、分析證據，探究全球環境問題。" },
+  { id:"B05", name:"全球環境偵探社", category:"自主探究", tag:"全球議題", url:"https://janeykases-cloud.github.io/global-earth-detectives/", description:"追查消失的家園與瀕危生命，探究氣候、生物多樣性與公平行動。" },
   { id:"B06", name:"島嶼的滋味", category:"自主探究", tag:"地方文化", url:"https://gemini.google.com/share/ac5cff9cb8c5", description:"從飲食出發探索島嶼生活、產業與文化。" },
-  { id:"B07", name:"理財大挑戰", category:"自主探究", tag:"金融素養", url:"https://gemini.google.com/share/e3a4f1c5d4af", description:"在任務選擇中練習預算、風險與理財觀念。" },
+  { id:"B07", name:"勇者理財島", category:"自主探究", tag:"金融素養", url:"https://janeykases-cloud.github.io/Monopoly/", description:"進入人生投資實驗室，在市場任務中練習預算、風險與理性投資。" },
   { id:"B08", name:"神燈精靈的創業指導", category:"自主探究", tag:"創業思考", url:"https://gemini.google.com/share/4de7a641d4ba?hl=zh-TW", description:"從需求、資源與創意出發完成創業思考挑戰。" },
+  { id:"B09", name:"團隊合作超能力", category:"自主探究", tag:"社會情緒學習", url:"https://team-role-explorer.janeykases.chatgpt.site/", description:"探索自己的團隊角色與工作能力，學習欣賞差異、合作互補。" },
   { id:"C01", name:"全球生存危機", category:"謎語挑戰", tag:"全球議題", url:"https://gemini.google.com/share/bb13be779244", description:"以謎題探索全球危機及彼此相連的世界。" },
   { id:"C02", name:"產業謎語大挑戰", category:"謎語挑戰", tag:"產業經濟", url:"https://gemini.google.com/share/eee21ba6af79", description:"從線索推理不同產業的特色、條件與關係。" },
   { id:"C03", name:"台灣永續環境挑戰賽", category:"謎語挑戰", tag:"永續發展", url:"https://gemini.google.com/share/f6e0a6b36711", description:"以挑戰任務認識台灣環境與永續行動。" },
@@ -61,7 +67,7 @@ export default function Home() {
       <div className="hero-copy">
         <p className="eyebrow"><span></span> 國立臺北教育大學・社會領域教學研究中心（小學組）</p>
         <h1>讓 AI 成為<br/><em>教與學的探究夥伴</em></h1>
-        <p className="hero-lead">從教師備課、課堂提問到學生自主探究，21 項 AI 教學應用，打開社會領域學習的新入口。</p>
+        <p className="hero-lead">從教師備課、課堂提問到學生自主探究，22 項 AI 教學應用，打開社會領域學習的新入口。</p>
         <div className="hero-actions">
           <a className="primary-button" href="#apps">開始探索 <span>↘</span></a>
           <span className="hero-note">免安裝・點擊即用・手機可掃碼</span>
@@ -79,7 +85,7 @@ export default function Home() {
     </section>
 
     <section className="stats" aria-label="網站統計">
-      <div><strong>21</strong><span>AI 教學應用</span></div>
+      <div><strong>22</strong><span>AI 教學應用</span></div>
       <div><strong>4</strong><span>學習主題分類</span></div>
       <div><strong>1</strong><span>共同入口網站</span></div>
     </section>
@@ -119,7 +125,7 @@ export default function Home() {
           <h3>{app.name}</h3><p>{app.description}</p>
           <div className="card-footer">
             <a href={app.url} target="_blank" rel="noreferrer">開啟 APP <span>↗</span></a>
-            <div className="qr-trigger"><img src={`/qr/${app.id}.svg`} alt={`${app.name} QR Code`} /><span>掃描<br/>QR Code</span></div>
+            <div className="qr-trigger"><img src={customQrCodes[app.id] ?? `/qr/${app.id}.svg`} alt={`${app.name} QR Code`} /><span>掃描<br/>QR Code</span></div>
           </div>
         </article>)}
       </div>
